@@ -1,0 +1,108 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/helpers/authors_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/helpers/books_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/helpers/categories_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/models/book.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        5,
+        5,
+        5,
+        null,
+        null,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/models/category.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        6,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/models/book_author.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/models/author.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1499288077
+  }
+}

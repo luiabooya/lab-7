@@ -18,10 +18,11 @@ FactoryGirl.define do
 
   # TODO: Add a factory for author below...
   # authors
-
-
-
-
+  factory :author do
+    first_name 'David'
+    last_name 'Black'
+    active true
+  end
 
 
   # book_authors

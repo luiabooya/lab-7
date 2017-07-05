@@ -4,10 +4,16 @@ class BookTest < ActiveSupport::TestCase
   # Start by using Shoulda's ActiveRecord matchers
   #
   # TODO: Relationship macros
-
+  should belong_to(:category)
+  should have_many(:book_authors)
+  should have_many(:authors).through(:book_authors)
 
   # TODO: Validation macros
-
+  should validate_presence_of(:title)
+  should allow_value(1000).for(:units_sold)
+  should_not allow_value(-1000).for(:units_sold)
+  should_not allow_value(3.14159).for(:units_sold)
+  should_not allow_value("bad").for(:units_sold)
 
   # TODO: Test dates as much as you can with matchers...
   
