@@ -14,10 +14,13 @@ class BookTest < ActiveSupport::TestCase
   should_not allow_value(-1000).for(:units_sold)
   should_not allow_value(3.14159).for(:units_sold)
   should_not allow_value("bad").for(:units_sold)
+  should allow_value(0).for(:units_sold)
 
   # TODO: Test dates as much as you can with matchers...
-  
-  
+  should allow_value(1.year.ago).for(:proposal_date)
+  should_not allow_value(1.week.from_now).for(:proposal_date)
+  should_not allow_value("bad").for(:proposal_date)
+  should_not allow_value(nil).for(:proposal_date)
 
 
   context "With a proper context, " do

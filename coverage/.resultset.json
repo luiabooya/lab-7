@@ -35,17 +35,17 @@
         null,
         null,
         null,
+        3,
         1,
-        1,
-        1,
-        null,
-        null,
-        null,
         1,
         null,
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
         1,
         null,
         1,
@@ -57,9 +57,9 @@
         null,
         1,
         1,
-        5,
-        5,
-        5,
+        10,
+        10,
+        10,
         null,
         null,
         null
@@ -74,7 +74,7 @@
         null,
         null,
         1,
-        6,
+        11,
         null
       ],
       "/Users/Luia/Apps/Labs/Lab 5 New/BookManager_2/app/models/book_author.rb": [
@@ -103,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1499288077
+    "timestamp": 1499288799
   }
 }
