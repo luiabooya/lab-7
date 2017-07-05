@@ -1,12 +1,13 @@
 # TODO: SimpleCov required here...
-
+require 'simplecov'
+SimpleCov.start 'rails'
 
 
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 # TODO: Turn required here...
-
+require 'turn/autorun'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -15,7 +16,8 @@ class ActiveSupport::TestCase
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
-  fixtures :all
+
+  # fixtures :all
 
 
   # ----------------------------------------------------
@@ -85,4 +87,4 @@ class ActiveSupport::TestCase
 end
 
 # Formatting test output a litte nicer ...
-
+Turn.config.format = :outline
