@@ -113,36 +113,60 @@ class BookTest < ActiveSupport::TestCase
     should "allow for a contract date in the past after the proposal date" do
       # take advantage of the fact that the default proposal date is 1 year ago...
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, contract_date: 50.weeks.ago, category: @ruby, 
+        title: "The Big Book of Ruby")
+      assert big_ruby_book.valid?
     end
     
     should "allow for contract and published dates to be nil" do
       # make pub date also nil otherwise it will fail b/c default pub date is 3 weeks ago, which is before a nil contract date      big_ruby_book = FactoryGirl.build(:book, :contract_date => nil, :published_date => nil, :category => @ruby, :title => "The Big Book of Ruby")
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, contract_date: nil, published_date: nil, category: @ruby, 
+        title: "The Big Book of Ruby")
+      assert big_ruby_book.valid?
     end
     
     should "not allow for a contract date in the past before the proposal date" do
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, contract_date: 14.months.ago, category: @ruby, 
+        title: "The Big Book of Ruby")
+      deny big_ruby_book.valid?
     end
     
     should "not allow for a contract date in the future" do
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, contract_date: 1.month.from_now, category: @ruby, 
+        title: "The Big Book of Ruby")
+      deny big_ruby_book.valid? 
     end
     
     should "allow for a published date in the past after the contract date" do
       # take advantage of the fact that the default contract date is 10 months ago...
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, published_date: 8.months.ago, category: @ruby,
+        title: "The Big Book of Ruby")
+        assert big_ruby_book.valid?
     end
     
     should "allow for just the published date to be nil" do
       # test code goes here...
+      luias_rails_book = FactoryGirl.build(:book, published_date: nil, category: @rails,
+        title: "New Rails Book")
+      assert luias_rails_book.valid?
     end
     
     should "not allow for a published date in the past before the contract date" do
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, published_date: 11.months.ago, category: @ruby,
+        title: "The Big Book of Ruby")
+      deny big_ruby_book.valid?
     end
     
     should "not allow for a published date in the future" do
       # test code goes here...
+      big_ruby_book = FactoryGirl.build(:book, published_date: 1.month.from_now, category: @ruby,
+        title: "The Big Book of Ruby")
+      deny big_ruby_book.valid?
     end
     
     
@@ -150,6 +174,11 @@ class BookTest < ActiveSupport::TestCase
     # test the custom validation 'category_is_active_in_system'
     should "identify an inactive category as invalid" do
       # test code goes here...
+      python = FactoryGirl.create(:category, name: "Python", active: false)
+      python_book = FactoryGirl.build(:book, category: python, title: "Python!")
+      deny python_book.valid?
+
+      python.destroy
     end
   end
 
