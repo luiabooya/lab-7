@@ -8,9 +8,9 @@ BookManager2::Application.routes.draw do
   resources :users
   
   # Generated model routes
+  resources :books
   resources :authors
   resources :categories
-  resources :books
   
   # Additional routes
   get 'proposed' => 'books#proposed', as: :proposed_books
