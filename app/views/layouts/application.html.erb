@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>BookManager :: <%= controller.controller_name.capitalize %> - <%= controller.action_name.capitalize %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
-	<div id="container">
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
-    <%= yield %>
-  </div>
+  <div class="container-fluid"> <!-- EVERYTHING HAS TO BE INSIDE THIS DIV-->
+	  
+	  <div class="row">
+		  <div class="col-md-8">
+			  <!-- MAIN CONTENT GOES HERE -->
+			  <%= yield %>
+			  <%= javascript_include_tag "application" %>
+		  </div>
+		  
+		  <div class="col-md-1">
+		  </div>
+		  
+		  <div class="col-md-3">
+			  <!-- SIDEBAR CONTENT GOES HERE -->
+			  <%= render partial: 'partials/quick_links' %>
+		  </div>
+	  </div>
+	  
+	  <footer>
+		  <div class="row">
+			  <div class="col-md-6 col-md-offset-3">
+				  <%= render partial: 'partials/footer'%>
+			  </div>
+	  </footer>
+   	
+   
+  </div> <!-- EVERYTHING HAS TO BE INSIDE THIS DIV-->
 </body>
+
 </html>
