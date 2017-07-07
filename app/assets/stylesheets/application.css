@@ -124,3 +124,8 @@ ul.options {
 .paginate {
 	font-size: 85%;
 }
+
+.date_select {
+	display: inline-block !important;
+	width: 30% !important;
+}
