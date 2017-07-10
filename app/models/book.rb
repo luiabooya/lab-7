@@ -8,6 +8,7 @@ class Book < ActiveRecord::Base
   # Validations built into rails
   validates :title, presence: true
   validates :units_sold, numericality: {only_integer: true, greater_than_or_equal_to: 0}
+  validates :authors, presence: true
   
   # Date validations using validates_timeliness gem
   # see https://github.com/adzap/validates_timeliness for documentation
